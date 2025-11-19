@@ -1,0 +1,23 @@
+:root{
+    --bg:#f7fafc; --card:#ffffff; --accent:#0ea5a5; --muted:#64748b;
+    --radius:12px; --gap:14px; --maxw:900px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;font-family:Inter,system-ui,Segoe UI,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:#0b1220; line-height:1.5;
+  }
+  .container{max-width:var(--maxw);margin:28px auto;padding:20px}
+  header h1{margin:0;font-size:20px}
+  .lead{margin-top:6px;color:var(--muted)}
+  .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(9,30,66,0.06);margin-top:16px;border:1px solid #e6eef6}
+  label{display:block;margin-top:10px;font-weight:600}
+  select,textarea{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #dbeafe;font-size:14px}
+  textarea{min-height:80px;resize:vertical}
+  .actions{display:flex;gap:10px;margin-top:12px}
+  button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+  button[disabled]{opacity:0.6;cursor:default}
+  #resultSummary{margin-top:8px;font-size:16px;font-weight:700}
+  .reason{margin-top:8px;padding:10px;border-radius:8px;background:#fbfdff;border-left:3px solid #e2e8f0}
+  .disclaimer{margin-top:10px;color:var(--muted);font-size:13px}
+  footer{margin-top:20px;color:var(--muted);font-size:13px} 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HTMLコンテンツ -->
+</body>
+</html>
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>著作権セルフチェック</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>著作権セルフチェック（プロトタイプ）</h1>
+      <p class="lead">フォームに答えると自動で侵害リスクの目安を表示します。法的助言ではありません。</p>
+    </header>
+
+    <section class="card">
+      <h2>質問フォーム</h2>
+      <form id="checkForm">
+        <label>1. 原作者の許諾はありますか？</label>
+        <select id="q1">
+          <option value="no">いいえ</option>
+          <option value="yes">はい（書面／メール等）</option>
+          <option value="unclear">不明/不確か</option>
+        </select>
+
+        <label>2. 使用目的は商用ですか？</label>
+        <select id="q2">
+          <option value="no">いいえ（個人／教育等）</option>
+          <option value="yes">はい（販売・広告等）</option>
+          <option value="unclear">一部商用/不明</option>
+        </select>
+
+        <label>3. 元作品のどのくらいを使っていますか？</label>
+        <select id="q3">
+          <option value="small">ごく一部（短い引用など）</option>
+          <option value="substantial">重要な部分・長め</option>
+          <option value="full">ほぼ全体</option>
+        </select>
+
+        <label>4. 加工・変形（編集）していますか？</label>
+        <select id="q4">
+          <option value="none">ほとんどそのまま</option>
+          <option value="some">一部加工・編集</option>
+          <option value="heavy">大幅に変形・二次創作的</option>
+        </select>
+
+        <label>5. 出所（クレジット）は明示していますか？</label>
+        <select id="q5">
+          <option value="yes">はい</option>
+          <option value="no">いいえ</option>
+          <option value="partial">一部だけ</option>
+        </select>
+
+        <label>6. その他（任意） — 簡単な説明</label>
+        <textarea id="notes" placeholder="例: 元画像はInstagramの公開投稿から引用..."></textarea>
+
+        <div class="actions">
+          <button id="localBtn" type="button">クライアント判定（即時）</button>
+          <button id="aiBtn" type="button">フォームをクリア</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="resultCard" aria-live="polite">
+      <h2>判定結果</h2>
+      <div id="resultSummary">まだ判定されていません。</div>
+      <div id="reasonList"></div>
+      <div class="disclaimer">※ この判定は参考情報です。最終的な法的判断は専門家へ。</div>
+    </section>
+
+    <footer>
+      <small>© 2025 project N Dgroup</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
